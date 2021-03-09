@@ -1,15 +1,14 @@
     /* global $ */
 //$(document).ready(function(){
     let time = 0;
-    let h = 00;
-    let s = 00;
-    let m = 00;
-    let ms = 00;
+    let h = 0;
+    let s = 0;
+    let m = 0;
+    let ms = 0;
     var IntervalId;
     
     //$(document).on("click",".StartButton", function() {
     function StartB () {
-        $(".test").text("スタート");
         //$(".SWT").text(time); //テキストを変更する処理です。
         document.getElementById("StaB").setAttribute("disabled", true);
         document.getElementById("StoB").removeAttribute("disabled");
@@ -45,7 +44,7 @@
                 clearInterval(IntervalId);
             }*/
             
-            },1);
+            },10);
         
     };
 
@@ -54,9 +53,7 @@
             document.getElementById("StoB").setAttribute("disabled", true);
             document.getElementById("StaB").removeAttribute("disabled");
         }
-        
-        $(".test").text("ストップ");
-        
+
         clearInterval(IntervalId);
         
     };
@@ -67,13 +64,12 @@
         document.getElementById("StoB").removeAttribute("disabled");
         
         clearInterval(IntervalId);
-        
-        $(".test").text("リセット");
-        h = 00;
-        m = 00;
-        s = 00;
-        ms = 00;
-        time=0;
+
+        h = 0;
+        m = 0;
+        s = 0;
+        ms = 0;
+        time = 0;
         $(".SWT").text(h + ":" + m + ":" + s + ":" + ms); //テキストを変更する処理です。
     };
 //});
